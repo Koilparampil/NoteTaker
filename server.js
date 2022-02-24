@@ -22,12 +22,12 @@ app.get('/api/notes', (req, res) => {
 app.post('/api/notes', (req, res) => {
   console.log(req.body);
 
-  const { Title, note} = req.body;
+  const { Title, text} = req.body;
 
   if (req.body) {
     const newNote = {
       Title,
-      note,
+      text,
       note_id: uuidv4(),
     };
 
