@@ -38,10 +38,27 @@ app.post('/api/notes', (req, res) => {
   }
 });
 
+app.delete('/:id', (req, res) => {
+    const noteId = req.params.id;
+    console.log(noteId);
+    readFromFile('./db/db.json')
+      .then((data) => JSON.parse(data))
+      .then((json) => {
+        // Make a new array of all tips except the one with the ID provided in the URL
+        const result = json.filter((note) => note.note_id !== noteId);
+  
+        // Save that array to the filesystem
+        writeToFile('./db/db.json', result);
+  
+        // Respond to the DELETE request
+        res.json(`Item ${noteId} has been deleted 🗑️`);
+      });
+  });
+  
 
-// app.get('*', (req, res) =>
-//   res.sendFile(path.join(__dirname, '/public/index.html'))
-// );
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+);
 
 
 
