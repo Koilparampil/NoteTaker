@@ -38,7 +38,7 @@ app.post('/api/notes', (req, res) => {
   }
 });
 
-app.delete('/:id', (req, res) => {
+app.delete('/api/notes/:id', (req, res) => {
     const noteId = req.params.id;
     console.log(noteId);
     readFromFile('./db/db.json')
