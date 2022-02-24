@@ -14,7 +14,14 @@ The motivation to build this project comes from wanting to build an application 
 ## Installation
 For this project you had to it was necessary to install two NPM package, Express and UUID. The first, Express.js is what enables Node.js to use javascript to act as a back-end. UUID on the other hand serves to create unique ids for the notes we were going to take in the application. You can install both of these with the `npm i` command, `npm i express` and `npm i uuid`. Because of the fact that I have created a package.json with the necessary dependancies, you couyld just run the `npm i` command and both of these packages will install to your machine automatically.
 ## Usage
-After installing the required Dependancies, to deploy the app locally, all you have to do is run the `node .\server.js` in the file directory that the code lives in. To deploy the app to Heroku, you first have to make sure that you have Heroku installed. Then you run the `heroku create` command int he root of the project. After that you run the following set of commands:
+After installing the required Dependancies, to deploy the app locally, all you have to do is run the `node .\server.js` in the file directory that the code lives in. 
+
+You can see the process of deploying to heroku here:
+
+![Heroku Deployment](/public/assets/imgs/Heroku_Deployment.png)
+
+
+To deploy the app to Heroku, you first have to make sure that you have Heroku installed. Then you run the `heroku create` command int he root of the project. After that you run the following set of commands:
 
 `git add -A`
 
@@ -22,7 +29,19 @@ After installing the required Dependancies, to deploy the app locally, all you h
 
 `git push heroku main` 
 
-Finally, you can see that your application is successfully runnitng by visiting the application URL that was provieded to you in the terminal you ran these commands.
+Finally, you can see that your application is successfully running by visiting the application URL that was provieded to you in the terminal you ran these commands.
+
+This is a screencap of the deployed application.
+![Screencap of Application](/public/assets/imgs/Screencap_of_application.png)
+
+Click on teh plus sign at the top right to add a new note. Type in a title for the note and then type in the text of the note. To save the note, click on the save sign. 
+
+
+
+The link to my deployed app can be found [here](https://radiant-everglades-43640.herokuapp.com/):
+
+[https://radiant-everglades-43640.herokuapp.com/](https://radiant-everglades-43640.herokuapp.com/)
+
 ## Collaborators
 I had no direct collaborators.
 Howerver, I had one main source from which I ripped out a lot of my code from. I had used the in class mini project to base off a lot of the Server code that I wrote.I would also like to thank W3schools who had many informative articles.
